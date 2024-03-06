@@ -1,12 +1,17 @@
 body {
   background-color: #f9f7fd;
 }
+#image {
+  position: absolute;
+}
 .weather-app {
-  background-color: white;
-  margin: 60px;
+  background-color: aqua;
+  margin: 200px;
   padding: 30px;
   border-radius: 16px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  display: block;
+  justify-content: right;
 }
 
 #search-button {
