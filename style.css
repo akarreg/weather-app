@@ -1,0 +1,18 @@
+body {
+  background-color: #f9f7fd;
+}
+.weather-app {
+  background-color: white;
+  margin: 60px;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+}
+
+#search-button {
+  background-color: blueviolet;
+  font-size: large;
+}
+.city-name {
+  font-size: xx-large;
+}
