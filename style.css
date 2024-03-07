@@ -3,7 +3,11 @@ body {
   width: 100%;
   height: auto;
 }
-
+html {
+  font-size: 11px;
+  background: url("./images/venue.jpg") bottom center;
+  background-size: cover;
+}
 .weather-app {
   background: #fff;
   max-width: 600px;
