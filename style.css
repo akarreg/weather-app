@@ -42,13 +42,39 @@ body {
 a {
   color: rgb(38, 38, 100);
 }
+
+.weather-data {
+  display: flex;
+  justify-content: space-between;
+}
+.city-name {
+  font-size: 40px;
+  padding-left: 20px;
+}
+#day-date #number {
+  font-weight: 600;
+  padding-left: 23px;
+}
+strong {
+  color: rgb(172, 30, 54);
+}
+.emoji-temp {
+  display: flex;
+  justify-content: baseline;
+}
+.emoji {
+  padding-top: 40px;
+  font-size: 120px;
+}
+.temp {
+  padding-top: 80px;
+  font-size: 50px;
+}
+
 footer {
   border-top: 1px solid pink;
   padding: 10px;
   padding-bottom: 0px;
   text-align: center;
   font-size: 12px;
-}
-.city-name {
-  font-size: xx-large;
 }
