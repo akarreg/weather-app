@@ -5,7 +5,8 @@ body {
 }
 html {
   font-size: 11px;
-  background: url("./images/venue.jpg") bottom center;
+  background-image: url("/Users/amagoiaakarregi/Desktop/week6/weather-app/earth-at-night.jpg");
+
   background-size: cover;
 }
 .weather-app {
