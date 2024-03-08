@@ -8,3 +8,6 @@ function infoSearch(event) {
 let searchFormElement = document.querySelector("#search-form");
 
 searchFormElement.addEventListener("submit", infoSearch);
+
+let apiUrl =
+  "https://api.shecodes.io/weather/v1/current?query={citi.name}&key={bc0c992ff01fe3156bt9ead9dob31418}";
