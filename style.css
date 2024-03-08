@@ -1,5 +1,5 @@
 body {
-  background-image: url(/Users/amagoiaakarregi/Desktop/week6/weather-app/earth-at-night.jpg);
+  background-image: url("./earth-at-night.jpg");
   width: 100%;
   height: auto;
 }
