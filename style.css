@@ -47,12 +47,12 @@ a {
   display: flex;
   justify-content: space-between;
 }
-.city-name {
+#city-name {
   font-size: 40px;
-  padding-left: 20px;
+  padding-left: 23px;
 }
-#dayDate #number {
-  font-weight: 600;
+.weather-app-data {
+  font-size: 20px;
   padding-left: 23px;
 }
 strong {
@@ -63,16 +63,17 @@ strong {
   justify-content: baseline;
 }
 .emoji {
-  padding-top: 40px;
-  font-size: 120px;
+  padding-top: 45px;
+  font-size: 50px;
+  width: 80px;
 }
 .temp {
-  padding-top: 80px;
-  font-size: 50px;
+  padding-top: 50px;
+  font-size: 60px;
 }
 .degree {
-  padding-top: 80px;
-  font-size: 50px;
+  padding-top: 50px;
+  font-size: 60px;
 }
 
 footer {
