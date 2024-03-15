@@ -80,7 +80,7 @@ strong {
 }
 .forecast-weather {
   background-color: #fff;
-  border-top: 0.5px dotted pink;
+  border-top: 0.8px dotted pink;
   margin-top: 0px;
   margin-bottom: 20px;
 }
@@ -98,7 +98,7 @@ strong {
 }
 
 footer {
-  border-top: 0.4px dotted pink;
+  border-top: 0.8px dotted pink;
   padding: 10px;
   padding-bottom: 0px;
   text-align: center;
