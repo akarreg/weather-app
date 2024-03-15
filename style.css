@@ -48,12 +48,15 @@ a {
   justify-content: space-between;
 }
 #city-name {
+  padding-top: 10px;
   font-size: 40px;
   padding-left: 23px;
+  margin: 2px;
 }
 .weather-app-data {
-  font-size: 20px;
+  font-size: 18px;
   padding-left: 23px;
+  padding-bottom: 60px;
 }
 strong {
   color: rgb(172, 30, 54);
@@ -63,16 +66,16 @@ strong {
   justify-content: baseline;
 }
 .emoji {
-  padding-top: 45px;
+  padding-top: 40px;
   font-size: 50px;
   width: 80px;
 }
 .temp {
-  padding-top: 50px;
+  padding-top: 40px;
   font-size: 60px;
 }
 .degree {
-  padding-top: 50px;
+  padding-top: 40px;
   font-size: 60px;
 }
 
