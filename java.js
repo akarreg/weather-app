@@ -8,9 +8,12 @@ function refreshWeather(response) {
   let timeElemet = document.querySelector("#dayDate");
   let date = new Date(response.data.time * 1000);
   timeElemet.innerHTML = formatDate(date);
+
   let iconElement = document.querySelector("#icon");
   iconElement.innerHTML = ` <img src= "${response.data.condition.icon_url}"class="emoji"/>`;
+
   descriptionElement.innerHTML = response.data.condition.description;
+
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = Math.round(temperature);
   humidityElement.innerHTML = `${response.data.temperature.humidity} %`;
@@ -47,6 +50,25 @@ function citySubmit(event) {
   let searchInput = document.querySelector("#search-city");
 
   searchCity(searchInput.value);
+}
+function displayForecast() {
+  let forecast = document.querySelector("#forecast");
+  forecast.innerHTML = `
+div class="forecast-weather">
+
+
+  <div class="forecast-date">
+    thurs
+  </div>
+  <div class=" colum">
+    
+    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" alt="" width="35px"/>
+</div>
+   
+<div class="forecast-temp">
+  <span class=" high-temp">18˚  </span>   <span class="low-temp" >  14˚</span> 
+</div>
+</div>`;
 }
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", citySubmit);
