@@ -81,6 +81,7 @@ strong {
   font-size: 60px;
 }
 .forecast-weather {
+  text-align: center;
   background: linear-gradient(
     180.3deg,
     rgb(221, 221, 221) 5.5%,
@@ -89,7 +90,6 @@ strong {
 
   margin-top: 20px;
   margin-bottom: 20px;
-  text-align: center;
 }
 .forecast-date {
   margin-top: 20px;

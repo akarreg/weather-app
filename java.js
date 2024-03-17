@@ -51,25 +51,37 @@ function citySubmit(event) {
 
   searchCity(searchInput.value);
 }
+
 function displayForecast() {
-  let forecast = document.querySelector("#forecast");
-  forecast.innerHTML = `
-div class="forecast-weather">
+  let forecastElement = document.querySelector("#forecast");
 
+  let days = ["Tue", "Wed", "Thur", "Fri", "Sat"];
 
-  <div class="forecast-date">
-    thurs
+  let forecastHtml = "";
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+  <div class="forecast-weather">
+
+  <div class="forecast-date"> ${day}
   </div>
-  <div class=" colum">
+  <div class=" forecast-icon">
     
     <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" alt="" width="35px"/>
 </div>
    
 <div class="forecast-temp">
-  <span class=" high-temp">18˚  </span>   <span class="low-temp" >  14˚</span> 
+  <span class="high-temp"> 18˚ </span>    
+<span class="low-temp"> 14˚ </span>
+ </div>
 </div>
-</div>`;
+`;
+  });
+  forecastElement.innerHTML = forecastHtml;
 }
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", citySubmit);
 searchCity("Bilbao");
+displayForecast();
