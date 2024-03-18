@@ -18,6 +18,7 @@ function refreshWeather(response) {
   temperatureElement.innerHTML = Math.round(temperature);
   humidityElement.innerHTML = `${response.data.temperature.humidity} %`;
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -51,37 +52,50 @@ function citySubmit(event) {
 
   searchCity(searchInput.value);
 }
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[date.getDay()];
+}
+function getForecast(city) {
+  let apiKey = "bc0c992ff01fe3156bt9ead9dob31418";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}& unit=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
 
-function displayForecast() {
-  let forecastElement = document.querySelector("#forecast");
+function displayForecast(response) {
+  console.log(response.data);
 
   let days = ["Tue", "Wed", "Thur", "Fri", "Sat"];
 
   let forecastHtml = "";
-  days.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml +
+        `
   <div class="forecast-weather">
-
-  <div class="forecast-date"> ${day}
+  <div class="forecast-date"> ${formatDay(day.time)}
   </div>
   <div class=" forecast-icon">
     
-    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" alt="" width="35px"/>
+    <img src="${day.condition.icon_url}" alt="" width="45px"/>
 </div>
    
 <div class="forecast-temp">
-  <span class="high-temp"> 18˚ </span>    
-<span class="low-temp"> 14˚ </span>
+  <span class="high-temp"> ${Math.round(day.temperature.maximum)}˚ </span>    
+<span class="low-temp"> ${Math.round(day.temperature.minimum)}˚</span>
  </div>
 </div>
 `;
+    }
   });
+  let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
 }
 
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", citySubmit);
 searchCity("Bilbao");
+
 displayForecast();
