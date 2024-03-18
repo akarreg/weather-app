@@ -64,9 +64,7 @@ a {
 #humidity {
   margin-right: 10px;
 }
-#wind {
-  font-size: 16px;
-}
+
 strong {
   color: rgb(149, 85, 96);
 }
@@ -104,21 +102,26 @@ strong {
 .forecast-date {
   margin-top: 20px;
   margin-left: 15px;
+
   font-size: 20px;
   color: rgb(38, 38, 100);
   opacity: 0.6;
+  text-align: center;
 }
 .forecast-temp {
   font-size: 16px;
   margin-bottom: 20px;
   margin-left: 10px;
+  margin-right: 10px;
 }
 .forecast-icon {
   margin-left: 10px;
+  text-align: center;
+  color: rgb(38, 38, 100);
 }
 .low-temp {
-  color: rgb(38, 38, 100);
-  opacity: 0.8;
+  color: #000114;
+  opacity: 0.7;
 }
 
 footer {
